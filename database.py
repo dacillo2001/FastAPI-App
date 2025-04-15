@@ -7,7 +7,6 @@ database_url = os.environ.get("postgresql://dbname_re6j_user:HlBY5FpYoVjXlBUNS4b
 # Creating the engine to interact with PostgreSQL
 engine = create_engine(database_url, echo=True)
 # Creating a session local class to interact with the database
-SessionLocal = sessionmaker(autocommit=False, autoflush=False,
-bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Base class to create tables
 Base = declarative_base()
